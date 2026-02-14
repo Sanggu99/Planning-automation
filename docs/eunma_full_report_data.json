@@ -1,0 +1,95 @@
+{
+    "project_name": "은마아파트 주택재건축 정비사업 최종 보고서",
+    "subtitle": "종합 분석 및 마스터플랜 제안: 도시 속의 숲 (Urban Forest)",
+    "overview": {
+        "location": "서울특별시 강남구 대치동 316번지 일원",
+        "site_area": "243,552.6 m²",
+        "zoning": "제3종일반주거지역, 특별건축구역(예정)",
+        "description": "지상 14층 / 28개동 / 4,424세대 (1979년 준공)"
+    },
+    "history_summary": [
+        "1단계: 기초 현황 분석 - 대지 면적 및 법적 제약 사항 검토 완료.",
+        "2단계: 법규 완화 전략 - 용적률 320% 상향 및 특별건축구역 전략 수립.",
+        "3단계: 매스 스터디 - 49층 랜드마크 타워 및 통경축 확보.",
+        "4단계: 시뮬레이션 - 지상 녹지 공간 70% 이상 확보 검증."
+    ],
+    "analysis_points": [
+        "용적률 상향: 법정 250% → 계획 319.88%",
+        "건폐율 최적화: 27.73% 유지로 쾌적한 보행 환경 조성",
+        "높이 계획: 최고 49층 스카이라인 구축",
+        "주차 계획: 전면 지하화 (B4 규모, 세대당 1.8대)"
+    ],
+    "masterplan_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/masterplan_concept_eunma.png",
+    "layout_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/site_layout_blueprint_eunma.png",
+    "layout_description": "단지 전체에 유기적인 보행 네트워크를 구축하고, 동과 동 사이의 통경축을 극대화하여 도시 미관을 개선하였습니다. 대치역과 학여울역을 잇는 활기찬 연도형 상가를 배치하여 지역 사회와의 연결성을 강화했습니다.",
+    "section_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/section_view_eunma.png",
+    "section_description": "대지의 레벨 차를 활용한 자연스러운 경사로를 설계하고, 지하 공간의 채광과 환기를 위한 드라이아리아(DA)를 전략적으로 배치했습니다. 49층 타워와 저층 주동의 리듬감 있는 배치가 특징입니다.",
+    "shoring_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/shoring_plan_eunma.png",
+    "shoring_description": "주변 건물의 안전성을 최우선으로 고려한 강재 토류판 및 어스앵커 공법을 적용했습니다.",
+    "parking_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/parking_plan_b1.png",
+    "parking_description": "광폭 주차 공간(2.6m)을 확보하고 동별 최단 거리 진입이 가능한 순환형 동선을 계획했습니다.",
+    "landscape_image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/landscape_detail_plan_eunma.png",
+    "concept_text": "본 계획안의 핵심은 '도시 속의 숲'입니다. 건물이 차지하는 면적을 최소화하고 나머지 공간을 모두 녹지로 환원하여 강남 도심 내 대규모 숲을 조성합니다. 유기적인 타워 배치를 통해 단지 어디서나 바람과 빛이 통하는 최첨단 주거 단지를 완성합니다.",
+    "architectural_outline": {
+        "대지면적": "243,552.60 m²",
+        "건축면적": "67,537.13 m²",
+        "건폐율": "27.73%",
+        "연면적": "약 779,080 m²",
+        "용적률": "319.88%",
+        "규모": "지하 4층 ~ 지상 49층",
+        "세대수": "총 5,962세대 (분양 4,872 / 임대 1,090)"
+    },
+    "strategies": [
+        "특별건축구역 지정을 통한 창의적인 디자인 유도 및 일조권 완화",
+        "영동대로 및 양재천과 연계된 1.5km 길이의 광역 녹지축 형성",
+        "에너지 자립률 20% 이상을 달성하는 친환경 제로 에너지 단지",
+        "대치동 교육 특구 특성을 반영한 하이엔드 커뮤니티 클러스터"
+    ],
+    "excel_files": {
+        "interior": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/docs/interior_finish_schedule.xlsx",
+        "landscape": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/docs/landscape_quantities.csv"
+    },
+    "unit_plans": [
+        {
+            "title": "Unit 59㎡ Premium Type",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_59.png",
+            "description": "3-Bay 판상형 구조로 맞통풍을 극대화하고 소형 평형임에도 넓은 드레스룸을 확보했습니다."
+        },
+        {
+            "title": "Unit 84㎡ Family Type",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_84.png",
+            "description": "4-Bay 혁신 평면을 적용하여 모든 침실의 채광을 확보하고 알파룸을 제공합니다."
+        },
+        {
+            "title": "Unit 114㎡ Luxury Type",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_114.png",
+            "description": "LDK 일체형 프리미엄 거실과 독립적인 서재 공간을 갖춘 대형 평면입니다."
+        }
+    ],
+    "core_plans": [
+        {
+            "title": "Standard 2-Unit Core",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_2unit.png",
+            "description": "프라이버시를 중시한 2세대 1엘리베이터 코어 시스템입니다."
+        },
+        {
+            "title": "Standard 6-Unit Core",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_6unit.png",
+            "description": "공간 효율성을 극대화한 복합형 코어 배치입니다."
+        },
+        {
+            "title": "Tower Landmark Core",
+            "image": "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_tower.png",
+            "description": "고층 타워를 위한 초고속 엘리베이터 및 비상 피난 계단 배치입니다."
+        }
+    ],
+    "elevation_images": [
+        "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/elevation_design_variations.png"
+    ],
+    "interior_images": [
+        "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_59_living.png",
+        "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_84_living.png",
+        "c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_114_living.png"
+    ],
+    "conclusion": "은마아파트 재건축은 단순한 주거 환경 개선을 넘어, 강남의 도시 구조를 재편하는 프로젝트입니다. 본 에이전트 분석 결과, 49층 고층 설계와 320% 용적률은 사업성을 극대화하는 동시에 도시 미관을 향상시키는 최적의 해법으로 확인되었습니다."
+}

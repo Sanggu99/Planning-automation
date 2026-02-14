@@ -1,0 +1,458 @@
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>은마아파트 주택재건축 정비사업 최종 보고서 - Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Noto+Sans+KR:wght@100;300;400;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --accent: #222;
+                --bg: #fff;
+                --text: #333;
+                --muted: #999;
+                --border: #ececec;
+            }
+
+            @media print {
+                @page {
+                    size: A4 landscape;
+                    margin: 0;
+                }
+                .page-break { page-break-after: always; }
+                body { -webkit-print-color-adjust: exact; }
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+                color: var(--text);
+                background-color: #f0f0f0;
+            }
+
+            .page {
+                width: 297mm;
+                height: 210mm;
+                padding: 15mm;
+                margin: 10mm auto;
+                background: white;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            @media print {
+                body {
+                    background-color: white;
+                }
+                .page {
+                    margin: 0;
+                    width: 297mm;
+                    height: 210mm;
+                    box-shadow: none;
+                    page-break-after: always;
+                }
+                .page-break { display: none; }
+            }
+
+            /* Minimal Header/Footer */
+            .page-header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 8pt;
+                color: var(--muted);
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 5mm;
+                margin-bottom: 5mm;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .page-footer {
+                position: absolute;
+                bottom: 15mm;
+                left: 15mm;
+                right: 15mm;
+                display: flex;
+                justify-content: space-between;
+                font-size: 8pt;
+                color: var(--muted);
+                border-top: 1px solid var(--border);
+                padding-top: 5mm;
+                letter-spacing: 1px;
+            }
+
+            /* Styles */
+            h1, h2, h3 {
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            /* --- Cover Page --- */
+            .cover {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                height: 100%;
+                gap: 15mm;
+                align-items: center;
+            }
+
+            .cover-text {
+                padding-left: 10mm;
+            }
+
+            .cover-title {
+                font-size: 40pt;
+                line-height: 1;
+                margin-bottom: 5mm;
+                font-weight: 700;
+            }
+
+            .cover-sub {
+                font-size: 14pt;
+                color: var(--muted);
+                margin-bottom: 10mm;
+            }
+
+            .cover-img-box {
+                height: 100%;
+                background: #000;
+                overflow: hidden;
+            }
+
+            .cover-img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.9;
+            }
+
+            /* --- Sections --- */
+            .content-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 10mm;
+                flex-grow: 1;
+            }
+
+            .sidebar {
+                border-right: 1px solid var(--border);
+                padding-right: 5mm;
+            }
+
+            .main-content {
+                display: flex;
+                flex-direction: column;
+                gap: 5mm;
+            }
+
+            .section-label {
+                font-size: 9pt;
+                color: var(--muted);
+                margin-bottom: 5mm;
+                display: block;
+            }
+
+            .wide-img {
+                width: 100%;
+                height: 120mm;
+                object-fit: cover;
+                background: #eee;
+            }
+
+            .img-caption {
+                font-size: 8pt;
+                color: var(--muted);
+                margin-top: 2mm;
+                text-align: right;
+            }
+
+            /* --- Table --- */
+            .data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 5mm;
+                font-size: 9pt;
+            }
+
+            .data-table td {
+                padding: 3mm 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .data-table .label {
+                color: var(--muted);
+                text-transform: uppercase;
+                width: 40%;
+            }
+
+            .data-table .val {
+                font-weight: 400;
+                text-align: right;
+            }
+
+            /* --- Gallery Grid --- */
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5mm;
+                margin-top: 5mm;
+            }
+
+            .portfolio-item {
+                aspect-ratio: 4/3;
+                background: #f9f9f9;
+                overflow: hidden;
+            }
+
+            .portfolio-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+            }
+
+            .stat-box {
+                background: #222;
+                color: white;
+                padding: 10mm;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2mm;
+            }
+
+            .stat-val {
+                font-size: 24pt;
+                font-weight: 700;
+            }
+
+            .stat-label {
+                font-size: 8pt;
+                text-transform: uppercase;
+                opacity: 0.6;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Page 1: Cover -->
+        <div class="page">
+            <div class="cover">
+                <div class="cover-text">
+                    <span class="section-label">Selected Works</span>
+                    <h1 class="cover-title">은마아파트 주택재건축 정비사업 최종 보고서</h1>
+                    <p class="cover-sub">종합 분석 및 마스터플랜 제안</p>
+                    <div style="margin-top: 20mm; font-size: 9pt; color: #666; width: 60mm; line-height: 2;">
+                        ARCHITECTURE PORTFOLIO<br>
+                        STRATEGIC ANALYSIS<br>
+                        2026-02-03
+                    </div>
+                </div>
+                <div class="cover-img-box">
+                    
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/masterplan_concept_eunma.png" alt="Cover">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 2: Project Overview & Strategy -->
+        <div class="page">
+            <div class="page-header">
+                <div>은마아파트 주택재건축 정비사업 최종 보고서</div>
+                <div>01 / Analysis</div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="sidebar">
+                    <h2 style="font-size: 18pt; margin-bottom: 10mm;">Project<br>Summary</h2>
+                    <table class="data-table">
+                        <tr><td class="label">Location</td><td class="val">서울특별시 강남구 대치동 316번지 일원</td></tr>
+                        <tr><td class="label">Site Area</td><td class="val">243,552.60 m²</td></tr>
+                        <tr><td class="label">FAR</td><td class="val">약 779,080 m² (용적률 319.88%) (319.88%)</td></tr>
+                        <tr><td class="label">Scale</td><td class="val">지하 4층 ~ 지상 49층</td></tr>
+                    </table>
+                    
+                    <div style="margin-top: 15mm;">
+                        <span class="section-label">Core Strategy</span>
+                        <ul style="list-style: none; font-size: 9pt; line-height: 2;">
+                            
+                            <li style="margin-bottom: 3mm; padding-left: 3mm; border-left: 2px solid #000;">특별건축구역 지정을 통한 창의적인 건축물 디자인 유도</li>
+                            
+                            <li style="margin-bottom: 3mm; padding-left: 3mm; border-left: 2px solid #000;">영동대로 및 양재천과 연계된 광역 녹지축 형성</li>
+                            
+                            <li style="margin-bottom: 3mm; padding-left: 3mm; border-left: 2px solid #000;">대치역/학여울역 역세권 활성화를 위한 고품격 상업 시설 배치</li>
+                            
+                            <li style="margin-bottom: 3mm; padding-left: 3mm; border-left: 2px solid #000;">에너지 자립형 친환경 단지 구축</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-content">
+                    
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/site_layout_blueprint_eunma.png" class="wide-img" style="height: 140mm;" alt="Layout">
+                    <div class="img-caption">Site Layout - Masterplan Integration</div>
+                    
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div>EUNMA REDEVELOPMENT</div>
+                <div>SEC. 01</div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 3: Technical Drawings -->
+        <div class="page">
+            <div class="page-header">
+                <div>은마아파트 주택재건축 정비사업 최종 보고서</div>
+                <div>02 / Technical Drawing</div>
+            </div>
+            
+            <div class="content-grid" style="grid-template-columns: 2fr 1fr;">
+                <div class="main-content">
+                    
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/section_view_eunma.png" class="wide-img" style="height: 90mm;" alt="Section">
+                    <div class="img-caption">Site Section AA' - Terrain Analysis</div>
+                    
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 5mm;">
+                        <div>
+                            
+                            <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/shoring_plan_eunma.png" style="width: 100%; height: 50mm; object-fit: cover;" alt="Shoring">
+                            <div class="img-caption" style="text-align: left;">Shoring Plan</div>
+                            
+                        </div>
+                        <div>
+                            
+                            <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/parking_plan_b1.png" style="width: 100%; height: 50mm; object-fit: cover;" alt="Parking">
+                            <div class="img-caption" style="text-align: left;">Parking Level B1</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar" style="border-right: none; border-left: 1px solid var(--border); padding-left: 5mm; padding-right: 0;">
+                    <h2 style="font-size: 18pt; margin-bottom: 10mm;">Technical<br>Brief</h2>
+                    <p style="font-size: 9pt; line-height: 1.8; color: #666;">
+                        본 계획안의 핵심은 '도시 속의 숲'입니다. 건물이 차지하는 면적을 최소화하고 나머지 공간을 모두 녹지로 환원하여 강남 도심 내 대규모 숲을 조성합니다. 유기적인 타워 배치를 통해 단지 어디서나 바람과 빛이 통하는 최첨단 주거 단지를 완성합니다.
+                    </p>
+                    <div class="stat-box" style="margin-top: 10mm;">
+                        <span class="stat-label">Building Coverage</span>
+                        <span class="stat-val">27.73%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div>EUNMA REDEVELOPMENT</div>
+                <div>SEC. 02</div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 4: Unit Plans -->
+        <div class="page">
+            <div class="page-header">
+                <div>은마아파트 주택재건축 정비사업 최종 보고서</div>
+                <div>03 / Unit & Core</div>
+            </div>
+            
+            <span class="section-label">Residential Units</span>
+            <div class="portfolio-grid" style="grid-template-columns: repeat(3, 1fr);">
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_59.png" alt="Unit 59㎡ Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">Unit 59㎡ Plan</div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_84.png" alt="Unit 84㎡ Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">Unit 84㎡ Plan</div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_114.png" alt="Unit 114㎡ Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">Unit 114㎡ Plan</div>
+                </div>
+                
+            </div>
+
+            <span class="section-label" style="margin-top: 10mm;">Vertical Circulation (Cores)</span>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_2unit.png" alt="2-Unit Core Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">2-Unit Core Plan</div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_6unit.png" alt="6-Unit Core Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">6-Unit Core Plan</div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_tower.png" alt="Tower Core Plan">
+                    <div class="img-caption" style="text-align: center; background: white; padding: 2mm;">Tower Core Plan</div>
+                </div>
+                
+            </div>
+
+            <div class="page-footer">
+                <div>EUNMA REDEVELOPMENT</div>
+                <div>SEC. 03</div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 5: Visualization -->
+        <div class="page">
+            <div class="page-header">
+                <div>은마아파트 주택재건축 정비사업 최종 보고서</div>
+                <div>04 / Visualization</div>
+            </div>
+            
+            <div style="height: 100mm; background: #000; overflow: hidden; margin-bottom: 5mm;">
+                
+                <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/landscape_detail_plan_eunma.png" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" alt="Landscape">
+                
+            </div>
+            
+            <span class="section-label">Facade & Interior Perspectives</span>
+            <div class="portfolio-grid" style="grid-template-columns: repeat(4, 1fr); flex-grow: 1;">
+                
+                <div class="portfolio-item"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/elevation_design_variations.png"></div>
+                
+                
+                <div class="portfolio-item"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_59_living.png"></div>
+                
+                <div class="portfolio-item"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_84_living.png"></div>
+                
+                <div class="portfolio-item"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_114_living.png"></div>
+                
+            </div>
+
+            <div class="page-footer">
+                <div>EUNMA REDEVELOPMENT</div>
+                <div>SEC. 04</div>
+            </div>
+        </div>
+
+    </body>
+    </html>
+    

@@ -1,0 +1,1167 @@
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>은마아파트 주택재건축 정비사업 최종 보고서 - Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Noto+Sans+KR:wght@100;300;400;700&display=swap" rel="stylesheet">
+        <style>
+            /* Architectural Portfolio - Premium Landscape Style */
+
+:root {
+    --accent-color: #000000;
+    --bg-color: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #eeeeee;
+    --sidebar-bg: #fafafa;
+    --highlight: #f0f0f0;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: white !important;
+    }
+
+    .page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    color: var(--text-primary);
+    background-color: #e5e5e5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page {
+    width: 297mm;
+    height: 210mm;
+    padding: 20mm;
+    margin: 10mm auto;
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 36pt;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 18pt;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10mm;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5mm;
+}
+
+p {
+    font-size: 10pt;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Components */
+.label-small {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 3mm;
+    display: block;
+}
+
+.page-num {
+    position: absolute;
+    bottom: 20mm;
+    right: 20mm;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-meta {
+    position: absolute;
+    bottom: 20mm;
+    left: 20mm;
+    font-size: 7pt;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Cover Page */
+.cover-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 100%;
+    gap: 0;
+}
+
+.cover-info {
+    padding-right: 15mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover-visual {
+    background: #000;
+    margin: -20mm;
+    margin-left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* Content Grid Layouts */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 15mm;
+    height: 100%;
+}
+
+.sidebar {
+    border-right: 1px solid var(--border-color);
+    padding-right: 10mm;
+}
+
+.main-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Tables */
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5mm;
+    font-size: 8.5pt;
+}
+
+.premium-table th {
+    text-align: left;
+    padding: 4mm 0;
+    border-bottom: 2px solid var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 7pt;
+}
+
+.premium-table td {
+    padding: 3.5mm 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.premium-table .highlight {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Image Grid & Captions */
+.image-container {
+    position: relative;
+    width: 100%;
+    background: var(--highlight);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.description-box {
+    margin-top: 3mm;
+    padding-top: 3mm;
+    border-top: 1px solid var(--border-color);
+}
+
+.description-box .title {
+    font-weight: 700;
+    font-size: 9pt;
+    margin-bottom: 1mm;
+    display: block;
+}
+
+.description-box .text {
+    font-size: 8.5pt;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5mm;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item .img-wrap {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: #000;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* Excel Style Table */
+.excel-table-section {
+    margin-top: 10mm;
+    background: var(--sidebar-bg);
+    padding: 5mm;
+    border-radius: 4px;
+}
+
+.excel-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+}
+
+.excel-data-table th {
+    background: #f0f0f0;
+    padding: 2mm;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.excel-data-table td {
+    padding: 2mm;
+    border: 1px solid #eee;
+}
+
+/* Strategic points */
+.strategy-list {
+    list-style: none;
+    margin-top: 10mm;
+}
+
+.strategy-item {
+    margin-bottom: 8mm;
+}
+
+.strategy-num {
+    font-size: 14pt;
+    font-weight: 200;
+    color: var(--text-muted);
+    margin-bottom: 1mm;
+    display: block;
+}
+        </style>
+    </head>
+    <body>
+
+        <!-- Page 1: Cover -->
+        <div class="page">
+            <div class="cover-layout">
+                <div class="cover-info">
+                    <span class="label-small">Architectural Monograph</span>
+                    <h1>은마아파트 주택재건축 정비사업 최종 보고서</h1>
+                    <p style="font-size: 14pt; margin-top: 5mm; font-weight: 300;">종합 분석 및 마스터플랜 제안: 도시 속의 숲 (Urban Forest)</p>
+                    
+                    <div style="margin-top: 30mm; border-top: 1px solid #000; padding-top: 10mm; width: 80mm;">
+                        <p style="font-size: 8pt; letter-spacing: 2px;">STRATEGIC PLANNING & ANALYSIS</p>
+                        <p style="font-size: 8pt; letter-spacing: 2px;">2026-02-03</p>
+                    </div>
+                </div>
+                <div class="cover-visual">
+                    
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/masterplan_concept_eunma.png" alt="Cover Image">
+                    
+                </div>
+            </div>
+            <div class="project-meta">UNMA-REDEVELOPMENT // ARCHIVE 2026</div>
+            <div class="page-num">01</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 2: Analysis & Context -->
+        <div class="page">
+            <div class="split-layout">
+                <div class="sidebar">
+                    <span class="label-small">01 // Context</span>
+                    <h2>Project<br>Brief</h2>
+                    
+                    <table class="premium-table">
+                        <tr><td>Location</td><td class="highlight">서울특별시 강남구 대치동 316번지 일원</td></tr>
+                        <tr><td>Site Area</td><td class="highlight">243,552.60 m²</td></tr>
+                        <tr><td>GFA</td><td class="highlight">약 779,080 m²</td></tr>
+                        <tr><td>BCR / FAR</td><td class="highlight">27.73% / 319.88%</td></tr>
+                        <tr><td>Units</td><td class="highlight">총 5,962세대 (분양 4,872 / 임대 1,090)</td></tr>
+                    </table>
+
+                    <div style="margin-top: 15mm;">
+                        <span class="label-small">Key Approaches</span>
+                        <div class="strategy-list">
+                            
+                            <div class="strategy-item">
+                                <span class="strategy-num">01</span>
+                                <p style="font-size: 9pt; color: #333;">특별건축구역 지정을 통한 창의적인 디자인 유도 및 일조권 완화</p>
+                            </div>
+                            
+                            <div class="strategy-item">
+                                <span class="strategy-num">02</span>
+                                <p style="font-size: 9pt; color: #333;">영동대로 및 양재천과 연계된 1.5km 길이의 광역 녹지축 형성</p>
+                            </div>
+                            
+                            <div class="strategy-item">
+                                <span class="strategy-num">03</span>
+                                <p style="font-size: 9pt; color: #333;">에너지 자립률 20% 이상을 달성하는 친환경 제로 에너지 단지</p>
+                            </div>
+                            
+                            <div class="strategy-item">
+                                <span class="strategy-num">04</span>
+                                <p style="font-size: 9pt; color: #333;">대치동 교육 특구 특성을 반영한 하이엔드 커뮤니티 클러스터</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="main-view">
+                    <div class="image-container" style="height: 150mm;">
+                        
+                        <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/site_layout_blueprint_eunma.png" alt="Layout Plan">
+                        
+                    </div>
+                    
+                    <div class="description-box">
+                        <span class="title">SITE LAYOUT & INTEGRATION</span>
+                        <p class="text">단지 전체에 유기적인 보행 네트워크를 구축하고, 동과 동 사이의 통경축을 극대화하여 도시 미관을 개선하였습니다. 대치역과 학여울역을 잇는 활기찬 연도형 상가를 배치하여 지역 사회와의 연결성을 강화했습니다.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="page-num">02</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 3: Technical Drawings -->
+        <div class="page">
+            <div class="split-layout" style="grid-template-columns: 2.5fr 1fr;">
+                <div class="main-view">
+                    <div class="image-container" style="height: 80mm; margin-bottom: 5mm;">
+                        
+                        <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/section_view_eunma.png" alt="Section">
+                        
+                    </div>
+                    
+                    <div class="description-box" style="margin-bottom: 5mm;">
+                        <span class="title">TOPOGRAPHICAL SECTION AA'</span>
+                        <p class="text">대지의 레벨 차를 활용한 자연스러운 경사로를 설계하고, 지하 공간의 채광과 환기를 위한 드라이아리아(DA)를 전략적으로 배치했습니다. 49층 타워와 저층 주동의 리듬감 있는 배치가 특징입니다.</p>
+                    </div>
+                    
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; flex-grow: 1;">
+                        <div class="gallery-item">
+                            <div class="image-container" style="height: 50mm;">
+                                <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/shoring_plan_eunma.png">
+                            </div>
+                            <div class="description-box">
+                                <span class="title">SHORING SYSTEM</span>
+                                <p class="text">주변 건물의 안전성을 최우선으로 고려한 강재 토류판 및 어스앵커 공법을 적용했습니다.</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-container" style="height: 50mm;">
+                                <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/parking_plan_b1.png">
+                            </div>
+                            <div class="description-box">
+                                <span class="title">PARKING LEVEL B1</span>
+                                <p class="text">광폭 주차 공간(2.6m)을 확보하고 동별 최단 거리 진입이 가능한 순환형 동선을 계획했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar" style="border-right: none; border-left: 1px solid var(--border-color); padding-left: 10mm; padding-right: 0;">
+                    <span class="label-small">02 // Engineering</span>
+                    <h2>Technical<br>Analysis</h2>
+                    <p style="margin-bottom: 10mm;">본 계획안의 핵심은 '도시 속의 숲'입니다. 건물이 차지하는 면적을 최소화하고 나머지 공간을 모두 녹지로 환원하여 강남 도심 내 대규모 숲을 조성합니다. 유기적인 타워 배치를 통해 단지 어디서나 바람과 빛이 통하는 최첨단 주거 단지를 완성합니다.</p>
+                    
+                    <div style="background: #000; color: #fff; padding: 8mm; margin-top: 10mm;">
+                        <span class="label-small" style="color: #666;">Proposed BCR</span>
+                        <div style="font-size: 28pt; font-weight: 200;">27.73%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-num">03</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 4: Interior & Material Schedule (Excel Data) -->
+        <div class="page">
+            <span class="label-small">03 // Specification</span>
+            <h2>Material & Finish<br>Schedules</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15mm; flex-grow: 1;">
+                
+                <div class="excel-table-section">
+                    <span class="label-small">Interior Finish Schedule</span>
+                    <div style="overflow-y: auto; max-height: 140mm;">
+                        <table class="excel-data-table">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>타입(Type)</th>
+                                    
+                                    <th>실명(Room)</th>
+                                    
+                                    <th>부위(Element)</th>
+                                    
+                                    <th>마감재(Material)</th>
+                                    
+                                    <th>규격/상세(Spec)</th>
+                                    
+                                    <th>수량</th>
+                                    
+                                    <th>단위</th>
+                                    
+                                    <th>단가(원)</th>
+                                    
+                                    <th>합계(원)</th>
+                                    
+                                    <th>비고</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>강마루 (Oak)</td>
+                                    
+                                    <td>115 x 800 x 7.5t</td>
+                                    
+                                    <td>45.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>45000</td>
+                                    
+                                    <td>2025000</td>
+                                    
+                                    <td>광폭 강마루 (자재비)</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>벽</td>
+                                    
+                                    <td>실크벽지</td>
+                                    
+                                    <td>LG 지인/개나리</td>
+                                    
+                                    <td>110.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>5000</td>
+                                    
+                                    <td>550000</td>
+                                    
+                                    <td>라이트 그레이 톤</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>천정</td>
+                                    
+                                    <td>실크도배</td>
+                                    
+                                    <td>우물천정 포함</td>
+                                    
+                                    <td>45.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>5000</td>
+                                    
+                                    <td>225000</td>
+                                    
+                                    <td>간접조명 별도</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>침실1(안방)</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>강마루 (Oak)</td>
+                                    
+                                    <td>동일 스펙</td>
+                                    
+                                    <td>18.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>45000</td>
+                                    
+                                    <td>810000</td>
+                                    
+                                    <td>-</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>침실1(안방)</td>
+                                    
+                                    <td>벽</td>
+                                    
+                                    <td>실크벽지</td>
+                                    
+                                    <td>웜 그레이</td>
+                                    
+                                    <td>45.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>5000</td>
+                                    
+                                    <td>225000</td>
+                                    
+                                    <td>-</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>59㎡</td>
+                                    
+                                    <td>공용욕실</td>
+                                    
+                                    <td>바닥/벽</td>
+                                    
+                                    <td>포세린 타일</td>
+                                    
+                                    <td>600 x 600</td>
+                                    
+                                    <td>28.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>35000</td>
+                                    
+                                    <td>980000</td>
+                                    
+                                    <td>논슬립 (자재비)</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>84㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>수입 원목마루</td>
+                                    
+                                    <td>190 x 1900 x 12t</td>
+                                    
+                                    <td>65.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>120000</td>
+                                    
+                                    <td>7800000</td>
+                                    
+                                    <td>브러쉬 텍스처</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>84㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>벽</td>
+                                    
+                                    <td>친환경 도장(벤자민무어)</td>
+                                    
+                                    <td>스커프엑스</td>
+                                    
+                                    <td>150.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>25000</td>
+                                    
+                                    <td>3750000</td>
+                                    
+                                    <td>자재비 기준</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>84㎡</td>
+                                    
+                                    <td>주방 상판</td>
+                                    
+                                    <td>가구</td>
+                                    
+                                    <td>엔지니어드 스톤</td>
+                                    
+                                    <td>칸스톤/비아테라</td>
+                                    
+                                    <td>5.5</td>
+                                    
+                                    <td>m</td>
+                                    
+                                    <td>350000</td>
+                                    
+                                    <td>1925000</td>
+                                    
+                                    <td>아일랜드 포함 (m당 단가)</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>84㎡</td>
+                                    
+                                    <td>침실1(안방)</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>원목마루</td>
+                                    
+                                    <td>동일 스펙</td>
+                                    
+                                    <td>24.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>120000</td>
+                                    
+                                    <td>2880000</td>
+                                    
+                                    <td>-</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>84㎡</td>
+                                    
+                                    <td>부부욕실</td>
+                                    
+                                    <td>바닥/벽</td>
+                                    
+                                    <td>이태리 타일</td>
+                                    
+                                    <td>600 x 1200</td>
+                                    
+                                    <td>35.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>70000</td>
+                                    
+                                    <td>2450000</td>
+                                    
+                                    <td>호텔식 조적 욕조</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>거실/주방</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>천연 대리석</td>
+                                    
+                                    <td>1200 x 1200</td>
+                                    
+                                    <td>85.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>150000</td>
+                                    
+                                    <td>12750000</td>
+                                    
+                                    <td>보티치노/크레마마필</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>거실</td>
+                                    
+                                    <td>아트월</td>
+                                    
+                                    <td>박판 세라믹</td>
+                                    
+                                    <td>3200 x 1600</td>
+                                    
+                                    <td>15.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>180000</td>
+                                    
+                                    <td>2700000</td>
+                                    
+                                    <td>북매치 시공</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>거실/복도</td>
+                                    
+                                    <td>벽</td>
+                                    
+                                    <td>무늬목 패널</td>
+                                    
+                                    <td>천연 건식 무늬목</td>
+                                    
+                                    <td>180.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>150000</td>
+                                    
+                                    <td>27000000</td>
+                                    
+                                    <td>히든도어 포함</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>주방</td>
+                                    
+                                    <td>가구</td>
+                                    
+                                    <td>수입 주방 가구</td>
+                                    
+                                    <td>Bulthaup/Arclinea 급</td>
+                                    
+                                    <td>1.0</td>
+                                    
+                                    <td>식</td>
+                                    
+                                    <td>85000000</td>
+                                    
+                                    <td>85000000</td>
+                                    
+                                    <td>빌트인 가전 별도</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>마스터존</td>
+                                    
+                                    <td>바닥</td>
+                                    
+                                    <td>광폭 원목마루</td>
+                                    
+                                    <td>240 x 2200</td>
+                                    
+                                    <td>40.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>150000</td>
+                                    
+                                    <td>6000000</td>
+                                    
+                                    <td>헤링본 패턴</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>114㎡</td>
+                                    
+                                    <td>마스터 욕실</td>
+                                    
+                                    <td>전체</td>
+                                    
+                                    <td>천연석/대형타일</td>
+                                    
+                                    <td>-</td>
+                                    
+                                    <td>45.0</td>
+                                    
+                                    <td>m2</td>
+                                    
+                                    <td>120000</td>
+                                    
+                                    <td>5400000</td>
+                                    
+                                    <td>독립형 욕조, 수전 특화</td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+
+                <div class="main-view">
+                    <div class="image-container" style="height: 80mm;">
+                        
+                        <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_59_living.png">
+                        
+                    </div>
+                    <div class="description-box">
+                        <span class="title">INTERIOR ATMOSPHERE</span>
+                        <p class="text">High-end finishing materials selected for spatial durability and aesthetic luxury.</p>
+                    </div>
+                    
+                    
+                    <div class="excel-table-section" style="margin-top: 5mm;">
+                        <span class="label-small">Landscape Quantities</span>
+                        <table class="excel-data-table">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>구분</th>
+                                    
+                                    <th>품명</th>
+                                    
+                                    <th>규격(Specification)</th>
+                                    
+                                    <th>수량</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    
+                                    <td>교목(Trees)</td>
+                                    
+                                    <td>소나무 (Pinus densiflora)</td>
+                                    
+                                    <td>H4.0 x R15</td>
+                                    
+                                    <td>150</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>교목(Trees)</td>
+                                    
+                                    <td>느티나무 (Zelkova serrata)</td>
+                                    
+                                    <td>R15</td>
+                                    
+                                    <td>120</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>교목(Trees)</td>
+                                    
+                                    <td>왕벚나무 (Prunus yedoensis)</td>
+                                    
+                                    <td>B12</td>
+                                    
+                                    <td>180</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>교목(Trees)</td>
+                                    
+                                    <td>단풍나무 (Acer palmatum)</td>
+                                    
+                                    <td>R10</td>
+                                    
+                                    <td>90</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>교목(Trees)</td>
+                                    
+                                    <td>이팝나무 (Chionanthus retusus)</td>
+                                    
+                                    <td>R10</td>
+                                    
+                                    <td>110</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>관목(Shrubs)</td>
+                                    
+                                    <td>영산홍 (Rhododendron indicum)</td>
+                                    
+                                    <td>H0.3 x W0.3</td>
+                                    
+                                    <td>5000</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>관목(Shrubs)</td>
+                                    
+                                    <td>회양목 (Buxus microphylla)</td>
+                                    
+                                    <td>H0.3 x W0.3</td>
+                                    
+                                    <td>4500</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>관목(Shrubs)</td>
+                                    
+                                    <td>조팝나무 (Spiraea prunifolia)</td>
+                                    
+                                    <td>H0.8</td>
+                                    
+                                    <td>3000</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>지피/초화(Groundcover)</td>
+                                    
+                                    <td>한국잔디 (Zoysia japonica)</td>
+                                    
+                                    <td>매트</td>
+                                    
+                                    <td>4500</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>지피/초화(Groundcover)</td>
+                                    
+                                    <td>맥문동 (Liriope platyphylla)</td>
+                                    
+                                    <td>-</td>
+                                    
+                                    <td>8000</td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="page-num">04</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 5: Residential Units -->
+        <div class="page">
+            <span class="label-small">04 // Dwelling</span>
+            <h2>Unit Plans<br>& Circulation</h2>
+            
+            <div class="gallery-3col" style="margin-top: 10mm;">
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_59.png"></div>
+                    <div class="description-box">
+                        <span class="title">Unit 59㎡ Premium Type</span>
+                        <p class="text">3-Bay 판상형 구조로 맞통풍을 극대화하고 소형 평형임에도 넓은 드레스룸을 확보했습니다.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_84.png"></div>
+                    <div class="description-box">
+                        <span class="title">Unit 84㎡ Family Type</span>
+                        <p class="text">4-Bay 혁신 평면을 적용하여 모든 침실의 채광을 확보하고 알파룸을 제공합니다.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/unit_plan_114.png"></div>
+                    <div class="description-box">
+                        <span class="title">Unit 114㎡ Luxury Type</span>
+                        <p class="text">LDK 일체형 프리미엄 거실과 독립적인 서재 공간을 갖춘 대형 평면입니다.</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="gallery-3col" style="margin-top: 10mm;">
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_2unit.png"></div>
+                    <div class="description-box">
+                        <span class="title">Standard 2-Unit Core</span>
+                        <p class="text">프라이버시를 중시한 2세대 1엘리베이터 코어 시스템입니다.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_6unit.png"></div>
+                    <div class="description-box">
+                        <span class="title">Standard 6-Unit Core</span>
+                        <p class="text">공간 효율성을 극대화한 복합형 코어 배치입니다.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="img-wrap"><img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/core_plan_tower.png"></div>
+                    <div class="description-box">
+                        <span class="title">Tower Landmark Core</span>
+                        <p class="text">고층 타워를 위한 초고속 엘리베이터 및 비상 피난 계단 배치입니다.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="page-num">05</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 6: Gallery & Visualization -->
+        <div class="page">
+            <div class="page-header" style="border: none;">
+                <span class="label-small">05 // Visualization</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 10mm; height: 130mm;">
+                <div class="image-container">
+                    
+                    <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/landscape_detail_plan_eunma.png" style="height: 100%;">
+                    
+                </div>
+                <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 10mm;">
+                    <div class="image-container">
+                        
+                        <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/elevation_design_variations.png">
+                        
+                    </div>
+                    <div class="image-container">
+                        
+                        <img src="c:/Users/SEOP/Desktop/기획설계 자동화 솔루션 개발/image/interior_84_living.png">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 10mm; margin-top: 5mm;">
+                <div class="description-box">
+                    <span class="title">ARCHITECTURAL EXPRESSION</span>
+                    <p class="text">The facade design employs high-performance glass and metallic accents, reflecting the urban energy while maintaining residential warmth through integrated landscape elements.</p>
+                </div>
+                <div class="description-box" style="border-left: 1px solid #eee; padding-left: 5mm; border-top: none; margin-top: 0; padding-top: 0;">
+                    <span class="title">CONCLUSION</span>
+                    <p class="text" style="font-style: italic;">"A synthesis of urban density and natural serenity."</p>
+                </div>
+            </div>
+            <div class="page-num">06</div>
+        </div>
+
+    </body>
+    </html>
+    

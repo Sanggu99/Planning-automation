@@ -1,0 +1,296 @@
+/* Architectural Portfolio - Premium Landscape Style */
+
+:root {
+    --accent-color: #000000;
+    --bg-color: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #eeeeee;
+    --sidebar-bg: #fafafa;
+    --highlight: #f0f0f0;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: white !important;
+    }
+
+    .page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    color: var(--text-primary);
+    background-color: #e5e5e5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page {
+    width: 297mm;
+    height: 210mm;
+    padding: 20mm;
+    margin: 10mm auto;
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 36pt;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 18pt;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10mm;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5mm;
+}
+
+p {
+    font-size: 10pt;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Components */
+.label-small {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 3mm;
+    display: block;
+}
+
+.page-num {
+    position: absolute;
+    bottom: 20mm;
+    right: 20mm;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-meta {
+    position: absolute;
+    bottom: 20mm;
+    left: 20mm;
+    font-size: 7pt;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Cover Page */
+.cover-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 100%;
+    gap: 0;
+}
+
+.cover-info {
+    padding-right: 15mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover-visual {
+    background: #000;
+    margin: -20mm;
+    margin-left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* Content Grid Layouts */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 15mm;
+    height: 100%;
+}
+
+.sidebar {
+    border-right: 1px solid var(--border-color);
+    padding-right: 10mm;
+}
+
+.main-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Tables */
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5mm;
+    font-size: 8.5pt;
+}
+
+.premium-table th {
+    text-align: left;
+    padding: 4mm 0;
+    border-bottom: 2px solid var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 7pt;
+}
+
+.premium-table td {
+    padding: 3.5mm 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.premium-table .highlight {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Image Grid & Captions */
+.image-container {
+    position: relative;
+    width: 100%;
+    background: var(--highlight);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.description-box {
+    margin-top: 3mm;
+    padding-top: 3mm;
+    border-top: 1px solid var(--border-color);
+}
+
+.description-box .title {
+    font-weight: 700;
+    font-size: 9pt;
+    margin-bottom: 1mm;
+    display: block;
+}
+
+.description-box .text {
+    font-size: 8.5pt;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5mm;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item .img-wrap {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: #000;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* Excel Style Table */
+.excel-table-section {
+    margin-top: 10mm;
+    background: var(--sidebar-bg);
+    padding: 5mm;
+    border-radius: 4px;
+}
+
+.excel-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+}
+
+.excel-data-table th {
+    background: #f0f0f0;
+    padding: 2mm;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.excel-data-table td {
+    padding: 2mm;
+    border: 1px solid #eee;
+}
+
+/* Strategic points */
+.strategy-list {
+    list-style: none;
+    margin-top: 10mm;
+}
+
+.strategy-item {
+    margin-bottom: 8mm;
+}
+
+.strategy-num {
+    font-size: 14pt;
+    font-weight: 200;
+    color: var(--text-muted);
+    margin-bottom: 1mm;
+    display: block;
+}
